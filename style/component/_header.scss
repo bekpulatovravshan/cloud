@@ -1,0 +1,211 @@
+.header {
+    width: 100%;
+    height: 782px;
+    background-color: $primary;
+    background-image: url(../../images/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include media(768) {
+        height: 600px;
+    }
+
+    @include media(576) {
+        height: 500px;
+    }
+
+    &-top {
+        width: 100%;
+        padding-block: 20px;
+
+        .logo {
+            @include flex;
+            column-gap: 7px;
+            color: $light;
+            font-size: $subtitleSize;
+            font-weight: $bold;
+            text-transform: uppercase;
+
+            @include media(768) {
+                font-size: $regularText;
+            }
+
+            @include media(576) {
+                font-size: $textSize;
+            }
+        }
+
+        &_nav {
+            @include flex;
+            column-gap: 20px;
+
+            @include media(950) {
+                column-gap: 15px;
+            }
+
+            @include media(850) {
+                display: none;
+            }
+
+            &-links {
+                color: $light;
+                font-size: $textSize;
+                font-weight: $bold;
+                text-transform: uppercase;
+
+                @include media(950) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .btn-group {
+            @include flex;
+            column-gap: 20px;
+
+            @include media(850) {
+                display: none;
+            }
+
+            .lang-btn {
+                @include flex;
+                column-gap: 11px;
+                color: $light;
+                font-size: $textSize;
+                text-transform: uppercase;
+                font-weight: $regular;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .login-btn {
+                padding: 12px 28px;
+                border-radius: $smborder;
+                border: 1px solid $light;
+                color: $light;
+                font-size: $textSize;
+                font-weight: $regular;
+                text-transform: uppercase;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .burger-menu {
+            width: 40px;
+            height: 25px;
+            @include flexbetween;
+            flex-direction: column;
+            display: none;
+
+            @include media(850) {
+                display: flex;
+            }
+
+            div {
+                width: 100%;
+                height: 4px;
+                background-color: $light;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    &-banner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding-block: 160px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        padding-inline: 20px;
+
+        @include media(768) {
+            row-gap: 30px;
+            padding-block: 140px;
+        }
+
+        @include media(576) {
+            row-gap: 20px;
+            padding-block: 110px;
+        }
+
+        &_title {
+            color: $light;
+            font-size: 72px;
+            font-weight: $bold;
+            letter-spacing: 3.6px;
+            text-transform: uppercase;
+
+            @include media(768) {
+                font-size: 60px;
+            }
+
+            @include media(576) {
+                font-size: 50px;
+            }
+
+            @include media(450) {
+                font-size: 40px;
+            }
+
+            @include media(375) {
+                font-size: 36px;
+            }
+
+            @include media(340) {
+                font-size: 30px;
+            }
+        }
+
+        &_text {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+            color: $light;
+            font-size: 24px;
+            font-weight: $semibold;
+            line-height: 150%;
+
+            @include media(768) {
+                font-size: $subtitleSize;
+            }
+
+            @include media(576) {
+                font-size: $regularText;
+            }
+        }
+
+        .signup-btn {
+            padding: 16px 52px;
+            color: $primary;
+            font-size: $textSize;
+            font-weight: $semibold;
+            text-transform: uppercase;
+            background-color: $light;
+            border-radius: $smborder;
+            width: max-content;
+            margin: 0 auto;
+            transition: 0.4s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+            @include media(576) {
+                padding: 10px 35px;
+            }
+        }
+    }
+}
+
+.title {
+    @include title;
+}

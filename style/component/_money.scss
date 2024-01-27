@@ -1,0 +1,133 @@
+.money {
+    background-color: $primary;
+    padding-block: 94px;
+
+    @include media(768) {
+        padding-block: 80px;
+    }
+    @include media(576) {
+        padding-block: 60px;
+    }
+
+    &-content {
+        column-gap: 81px;
+
+        @include media(1100) {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+    }
+
+    &-info {
+        max-width: 445px;
+        width: 100%;
+        text-align: center;
+
+        &_title {
+            @include title;
+            color: $light;
+            font-size: $titleSize;
+            font-weight: $semibold;
+            text-align: left;
+
+            @include media(1100) {
+                text-align: center;
+            }
+        }
+
+        &_text {
+            margin-block: 40px;
+            color: $light;
+            text-align: justify;
+            font-size: $textSize;
+            font-weight: $regular;
+            line-height: 140%;
+
+            @include media(1100) {
+                text-align: center;
+                margin-block: 30px;
+            }
+
+            @include media(768) {
+                margin-block: 20px;
+                font-size: 12px;
+            }
+        }
+
+        &_links {
+            @include flex;
+            column-gap: 23px;
+
+            @include media(1100) {
+                justify-content: center;
+            }
+        }
+    }
+
+    &-img {
+        max-width: 535px;
+        width: 100%;
+        position: relative;
+        height: 311px;
+
+        @include media(550) {
+            height: 250px; 
+        }
+
+        @include media(400) {
+            height: 210px; 
+        }
+
+        @include media(400) {
+            height: 180px;   
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            display: block;
+        }
+
+        &_first {
+            left: 0;
+            z-index: 5;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include media(550) {
+            width: 85%;
+        } 
+
+        &_second {
+            position: absolute;
+            top: 22px !important;
+            left: 0;
+            z-index: 4;
+
+            @include media(550) {
+                width: 72%;
+            }
+
+            @include media(400) {
+                width: 65%;
+            }
+        }
+        &_third {
+            position: absolute;
+            top: 22px !important;
+            right: 0;
+            z-index: 3;
+            width: 75%;
+
+            @include media(550) {
+                width: 72%;
+            }
+
+            @include media(400) {
+                width: 65%;
+            }
+        }
+    }
+}

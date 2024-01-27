@@ -1,0 +1,83 @@
+.form {
+    padding: 117px 0 78px;
+
+    &-info {
+        max-width: 445px;
+        width: 100%;
+
+        &_title {
+            margin-bottom: 50px;
+            @include title;
+        }
+
+        &_text {
+            color: $secondary;
+            text-align: justify;
+            font-size: $textSize;
+            font-weight: $regular;
+            line-height: 140%;
+        }
+    }
+
+    &-action {
+        max-width: 540px;
+        width: 100%;
+        display: flex;
+        column-gap: 30px;
+        row-gap: 24px;
+        flex-wrap: wrap;
+
+        input {
+            border-radius: $smborder;
+            border: 1px solid $borderColor;
+            padding: 20px 30px;
+            width: 255px;
+
+            &::placeholder {
+                color: rgba(19, 39, 67, 0.5);
+            }
+
+            &:focus {
+                outline: none;
+                border: 1px solid $primary;
+            }
+
+            &[type="number"] {
+                width: 100%;
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
+                    appearance: none;
+                }
+            }
+        }
+
+        &_select {
+            width: 100%;
+            border-radius: $smborder;
+            border: 1px solid $borderColor;
+            padding: 20px 30px;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $primary;
+            }
+        }
+
+        .submit-btn {
+            padding: 17px 34px;
+            background-color: $primary;
+            color: $light;
+            border-radius: $smborder;
+            font-size: $textSize;
+            font-weight: $regular;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

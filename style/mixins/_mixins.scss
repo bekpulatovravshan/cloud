@@ -1,0 +1,34 @@
+@mixin title {
+    color: $secondary;
+    font-size: $titleSize;
+    font-weight: $semibold;
+
+    @include media(993) {
+        font-size: 30px;
+    }
+
+    @include media(768) {
+        font-size: 25px;
+    }
+
+    @include media(576) {
+        font-size: 20px;
+    }
+}
+
+@mixin flexbetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
